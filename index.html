@@ -1,104 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rubik:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Borel&family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700&family=Rubik:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <title>Ayoo's Profile</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="top-container col-12 col-sm-12 col-md-12">
-      <img class="top-cloud" src="images/cloud.png" alt="cloud" />
-      <div class="title-text">
-        <h1>Ayoo Gayheart.</h1>
-        <h2>a <span class="pro">pro</span>grammer.</h2>
-      </div>
-      <img class="bottom-cloud" src="images/cloud.png" alt="cloud" />
-      <!-- <img class="mountain" src="images/mountain.png" alt=""> -->
-    </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>For Chantal 💖</title>
 
-    <div class="middle-container col-sm-12 col-md-12">
-      <div class="profile col-md-12 col-sm-12">
-        <img
-          class="gayheart-img"
-          src="images/ayooGayheart.jpeg"
-          alt="Gayheart's-profile-img"
-        />
-        <h2 class="hello" style="font-family: 'Borel', 'cursive'">Hello</h2>
-        <p class="intro">
-          I am a Python Programmer and a Web Developer. I Studied Bsc Computer
-          Science in Central University.
-        </p>
-      </div>
-      <hr />
-      <div class="skills">
-        <h2 style="font-family: 'Borel', 'cursive'">My Skills</h2>
-        <div class="skill-row">
-          <img class="code-img" src="images/skills.jpg" alt="code-img" />
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
 
-          <h3>Programming Skills</h3>
-          <p>Skills :</p>
-          <ul>
-            <li>Basic fundamentals of python Programming</li>
-            <li>Django and flusk framework</li>
-            <li>HTML,CSS and Javascript</li>
-            <li>JavaScript Library (JQuery)</li>
-            <li>Version Control system such as Git, GitHub</li>
-          </ul>
+  <style>
+    :root {
+      --bg1: #0b1220;
+      --bg2: #2b1055;
+      --glass: rgba(255, 255, 255, 0.08);
+      --stroke: rgba(255, 255, 255, 0.12);
+    }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(1200px 800px at 15% 20%, rgba(255, 77, 137, 0.35), transparent 60%),
+        radial-gradient(1000px 700px at 85% 30%, rgba(120, 80, 255, 0.35), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .glass-card {
+      background: var(--glass);
+      border: 1px solid var(--stroke);
+      backdrop-filter: blur(12px);
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .subtle {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .love-btn {
+      width: clamp(110px, 18vw, 160px);
+      height: clamp(110px, 18vw, 160px);
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: linear-gradient(135deg, rgba(255, 77, 137, 0.95), rgba(255, 170, 200, 0.85));
+      box-shadow: 0 18px 50px rgba(255, 77, 137, 0.35);
+      display: grid;
+      place-items: center;
+      font-size: clamp(42px, 6vw, 64px);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+      user-select: none;
+    }
+
+    .love-btn:hover { transform: translateY(-2px) scale(1.02); }
+    .love-btn:active { transform: translateY(1px) scale(0.98); }
+
+    .tap-hint {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .4rem .75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      font-size: .95rem;
+    }
+
+    .message {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 320ms ease, transform 320ms ease;
+    }
+    .message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* tiny floating hearts */
+    .heart {
+      position: absolute;
+      font-size: 18px;
+      pointer-events: none;
+      animation: floatUp 900ms ease-out forwards;
+      filter: drop-shadow(0 8px 10px rgba(0,0,0,0.25));
+    }
+    @keyframes floatUp {
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to   { transform: translateY(-120px) scale(1.4); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container py-5">
+    <div class="row justify-content-center align-items-center" style="min-height: calc(100vh - 6rem);">
+      <div class="col-12 col-md-9 col-lg-7">
+        <div class="glass-card p-4 p-md-5 text-center position-relative">
+          <div class="mb-3">
+            <h1 class="fw-semibold mb-2">Hey Chantal 💖</h1>
+            <p class="subtle mb-0">A tiny page, just for you.</p>
+          </div>
+
+          <div class="my-4 d-grid gap-3 justify-content-center">
+            <button id="loveBtn" class="love-btn" type="button" aria-label="Love button">
+              ❤️
+            </button>
+
+            <div class="tap-hint mx-auto">
+              <span>👆</span>
+              <span class="subtle">Tap me</span>
+            </div>
+          </div>
+
+          <div id="msg" class="message mt-4">
+            <h2 class="fw-bold mb-2">I miss you chantal</h2>
+            <p class="subtle mb-0">— from me 🙂</p>
+          </div>
+
+          <div class="mt-4 pt-3 border-top border-light border-opacity-10">
+            <small class="subtle">Made with love • Bootstrap 5</small>
+          </div>
         </div>
-        <div class="skill-row">
-          <img class="project-img" src="images/project.jpg" alt="project-img" />
-
-          <h3>Projects</h3>
-          <p>Personal works and projects :</p>
-          <ul>
-            <li>Food ordering system with Django framework</li>
-            <li>Login Page</li>
-            <li>Add and Increase functionality</li>
-            <li>todo-list</li>
-            <li>Basic Calculator</li>
-            <li>other small Django Projects</li>
-          </ul>
-        </div>
-      </div>
-      <hr />
-      <div class="contact-me">
-        <h2 style="font-family: 'Borel', 'cursive'">Get In Touch</h2>
-        <h3>If you want to talk about any Programming related activities.</h3>
-        <p class="contact-message">Love to Program in Python</p>
-        <a class="btn" href="mailto:ayoogayheart@gmail.com">CONTACT ME</a>
       </div>
     </div>
+  </main>
 
-    <div class="bottom-container">
-      <a class="footer-link" href="https://www.linkedin.com/in/ayoo-gayheart/"
-        >LinkedIn</a
-      >
-      <a class="footer-link" href="https://twitter.com/Gayheart_Ayoo"
-        >Twitter</a
-      >
-      <a class="footer-link" href="https://github.com/Gayheart2506"
-        >GitHub Profile</a
-      >
-      <p class="copyright">© 2023 Ayoo Gayheart.</p>
-    </div>
-  </body>
+  <!-- Bootstrap JS (optional, but fine to include) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const btn = document.getElementById("loveBtn");
+    const msg = document.getElementById("msg");
+
+    function popHearts(count = 14) {
+      const rect = btn.getBoundingClientRect();
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement("div");
+        el.className = "heart";
+        el.textContent = Math.random() > 0.25 ? "💖" : "✨";
+
+        // start near button center with small random offset
+        const x = rect.left + rect.width / 2 + (Math.random() - 0.5) * 90;
+        const y = rect.top + rect.height / 2 + (Math.random() - 0.5) * 40;
+
+        el.style.left = x + "px";
+        el.style.top = y + "px";
+        el.style.transform = `translateY(0) scale(${0.8 + Math.random() * 0.7})`;
+
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 950);
+      }
+    }
+
+    btn.addEventListener("click", () => {
+      msg.classList.toggle("show");
+      popHearts();
+      btn.animate(
+        [{ transform: "scale(1)" }, { transform: "scale(1.08)" }, { transform: "scale(1)" }],
+        { duration: 220, easing: "ease-out" }
+      );
+    });
+  </script>
+</body>
 </html>
