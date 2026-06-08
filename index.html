@@ -1,168 +1,595 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>For Chantal 💖</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Bootstrap CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <title>Gayheart Bapalesum Ayoo | Software Engineer</title>
 
-  <style>
-    :root {
-      --bg1: #0b1220;
-      --bg2: #2b1055;
-      --glass: rgba(255, 255, 255, 0.08);
-      --stroke: rgba(255, 255, 255, 0.12);
-    }
+  <meta name="description" content="Professional portfolio of Gayheart Bapalesum Ayoo, a software engineer and full-stack developer specializing in Python, Django, Bootstrap, APIs, frontend and backend development." />
 
-    body {
-      min-height: 100vh;
-      background:
-        radial-gradient(1200px 800px at 15% 20%, rgba(255, 77, 137, 0.35), transparent 60%),
-        radial-gradient(1000px 700px at 85% 30%, rgba(120, 80, 255, 0.35), transparent 60%),
-        linear-gradient(135deg, var(--bg1), var(--bg2));
-      color: #fff;
-      overflow-x: hidden;
-    }
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-    .glass-card {
-      background: var(--glass);
-      border: 1px solid var(--stroke);
-      backdrop-filter: blur(12px);
-      border-radius: 1.25rem;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-    }
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    .subtle {
-      color: rgba(255,255,255,0.75);
-    }
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    .love-btn {
-      width: clamp(110px, 18vw, 160px);
-      height: clamp(110px, 18vw, 160px);
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: linear-gradient(135deg, rgba(255, 77, 137, 0.95), rgba(255, 170, 200, 0.85));
-      box-shadow: 0 18px 50px rgba(255, 77, 137, 0.35);
-      display: grid;
-      place-items: center;
-      font-size: clamp(42px, 6vw, 64px);
-      transition: transform 180ms ease, box-shadow 180ms ease;
-      user-select: none;
-    }
-
-    .love-btn:hover { transform: translateY(-2px) scale(1.02); }
-    .love-btn:active { transform: translateY(1px) scale(0.98); }
-
-    .tap-hint {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      padding: .4rem .75rem;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
-      font-size: .95rem;
-    }
-
-    .message {
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 320ms ease, transform 320ms ease;
-    }
-    .message.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* tiny floating hearts */
-    .heart {
-      position: absolute;
-      font-size: 18px;
-      pointer-events: none;
-      animation: floatUp 900ms ease-out forwards;
-      filter: drop-shadow(0 8px 10px rgba(0,0,0,0.25));
-    }
-    @keyframes floatUp {
-      from { transform: translateY(0) scale(1); opacity: 1; }
-      to   { transform: translateY(-120px) scale(1.4); opacity: 0; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <main class="container py-5">
-    <div class="row justify-content-center align-items-center" style="min-height: calc(100vh - 6rem);">
-      <div class="col-12 col-md-9 col-lg-7">
-        <div class="glass-card p-4 p-md-5 text-center position-relative">
-          <div class="mb-3">
-            <h1 class="fw-semibold mb-2">Hey Chantal 💖</h1>
-            <p class="subtle mb-0">A tiny page, just for you.</p>
-          </div>
 
-          <div class="my-4 d-grid gap-3 justify-content-center">
-            <button id="loveBtn" class="love-btn" type="button" aria-label="Love button">
-              ❤️
-            </button>
+  <div id="preloader">
+    <div class="loader-box">
+      <div class="loader-ring"></div>
+      <h2>Gayheart.dev</h2>
+      <p>Building digital experiences...</p>
+    </div>
+  </div>
 
-            <div class="tap-hint mx-auto">
-              <span>👆</span>
-              <span class="subtle">Tap me</span>
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span>Gayheart</span><strong>.dev</strong>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stack">Stack</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn nav-btn" href="#contact">Hire Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero-section">
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <div class="container">
+      <div class="row align-items-center min-vh-100 gy-5">
+        <div class="col-lg-6">
+          <div class="hero-content reveal">
+            <span class="hero-badge">
+              <i class="fa-solid fa-code"></i>
+              Software Engineer & Full-Stack Developer
+            </span>
+
+            <h1>
+              Hi, I’m <span>Gayheart Bapalesum Ayoo</span>
+            </h1>
+
+            <p>
+              I build modern, scalable, and reliable digital products using
+              Python, Django, Bootstrap, APIs, frontend technologies, backend systems,
+              and clean deployment workflows.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#projects" class="btn primary-btn">
+                View My Work
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+              <a href="#contact" class="btn secondary-btn">
+                Let’s Talk
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <h3>Full</h3>
+                <p>Stack Development</p>
+              </div>
+              <div>
+                <h3>API</h3>
+                <p>Integration</p>
+              </div>
+              <div>
+                <h3>Web</h3>
+                <p>Deployment</p>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div id="msg" class="message mt-4">
-            <h2 class="fw-bold mb-2">I miss you chantal</h2>
-            <p class="subtle mb-0">— from me 🙂</p>
-          </div>
+        <div class="col-lg-6">
+          <div class="hero-image-wrap reveal delay-1">
+            <div class="hero-card floating-card card-one">
+              <i class="fa-brands fa-python"></i>
+              Python
+            </div>
 
-          <div class="mt-4 pt-3 border-top border-light border-opacity-10">
-            <small class="subtle">Made with love • Bootstrap 5</small>
+            <div class="hero-card floating-card card-two">
+              <i class="fa-solid fa-database"></i>
+              Backend
+            </div>
+
+            <div class="hero-image">
+              <img src="images/gayheart-hero.jpeg" alt="Gayheart Bapalesum Ayoo full-stack developer portfolio image">
+            </div>
+
+            <div class="hero-card floating-card card-three">
+              <i class="fa-solid fa-rocket"></i>
+              Deploy Ready
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </header>
+
+  <main>
+
+    <section id="about" class="section-padding about-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-5">
+            <div class="about-image reveal">
+              <img src="images/gayheart-profile.jpeg" alt="Professional portrait of Gayheart Bapalesum Ayoo">
+              <div class="experience-badge">
+                <strong>Software</strong>
+                <span>Engineer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="section-title reveal">
+              <span>About Me</span>
+              <h2>Developer focused on clean code, practical systems, and business results.</h2>
+            </div>
+
+            <p class="about-text reveal delay-1">
+              I am Gayheart Bapalesum Ayoo, a software engineer and developer passionate about
+              creating professional web platforms, backend systems, APIs, dashboards, business tools,
+              and digital products that solve real problems.
+            </p>
+
+            <p class="about-text reveal delay-2">
+              My workflow covers frontend development, backend architecture, database design,
+              third-party integrations, payment systems, deployment, maintenance, and performance optimization.
+            </p>
+
+            <div class="about-grid reveal delay-3">
+              <div class="about-item">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div>
+                  <h4>Frontend</h4>
+                  <p>HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <i class="fa-solid fa-laptop-code"></i>
+                <div>
+                  <h4>Mobile Development</h4>
+                  <p>Flutter</p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <i class="fa-solid fa-server"></i>
+                <div>
+                  <h4>Backend</h4>
+                  <p>Python, Django, APIs, Databases</p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <i class="fa-solid fa-credit-card"></i>
+                <div>
+                  <h4>Payments</h4>
+                  <p>Paystack and payment integrations</p>
+                </div>
+              </div>
+
+              <div class="about-item">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <div>
+                  <h4>Deployment</h4>
+                  <p>AWS and Render, hosting and production setup</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn primary-btn mt-4 reveal delay-4">
+              Work With Me
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section-padding stack-section">
+      <div class="container">
+        <div class="section-title text-center reveal">
+          <span>Tech Stack</span>
+          <h2>Tools and technologies I work with</h2>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-6 col-md-4 col-lg-3 reveal">
+            <div class="stack-card">
+              <i class="fa-brands fa-python"></i>
+              <h4>Python</h4>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1">
+            <div class="stack-card">
+              <i class="fa-solid fa-d"></i>
+              <h4>Django</h4>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-2">
+            <div class="stack-card">
+              <i class="fa-brands fa-bootstrap"></i>
+              <h4>Bootstrap</h4>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-3">
+            <div class="stack-card">
+              <i class="fa-brands fa-js"></i>
+              <h4>JavaScript</h4>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 reveal">
+            <div class="stack-card">
+              <i class="fa-brands fa-html5"></i>
+              <h4>HTML5</h4>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-1">
+            <div class="stack-card">
+              <i class="fa-brands fa-css3-alt"></i>
+              <h4>CSS3</h4>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-2">
+            <div class="stack-card">
+              <i class="fa-solid fa-plug"></i>
+              <h4>APIs</h4>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-3 reveal delay-3">
+            <div class="stack-card">
+              <i class="fa-solid fa-cloud"></i>
+              <h4>AWS</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-padding services-section">
+      <div class="container">
+        <div class="section-title text-center reveal">
+          <span>Services</span>
+          <h2>What I can build for you</h2>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-window-maximize"></i>
+              </div>
+              <h3>Website Development</h3>
+              <p>
+                Responsive, modern, clean, and conversion-focused websites for personal brands,
+                startups, businesses, and organizations.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal delay-1">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-gears"></i>
+              </div>
+              <h3>Backend Systems</h3>
+              <p>
+                Secure backend applications with Django, database structure, authentication,
+                admin dashboards, and API logic.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal delay-2">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <h3>Payment Integration</h3>
+              <p>
+                Paystack payment flows, checkout systems, transaction verification,
+                wallet features, and payment dashboards.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </div>
+              <h3>Responsive UI</h3>
+              <p>
+                Mobile-first interfaces that look smooth on phones, tablets, laptops,
+                and large desktop screens.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal delay-1">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-code-branch"></i>
+              </div>
+              <h3>API Integration</h3>
+              <p>
+                Connecting applications to external services, payment APIs, internal APIs,
+                business tools, and automation workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal delay-2">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h3>Deployment</h3>
+              <p>
+                Project setup, hosting, production deployment, version control,
+                debugging, maintenance, and launch support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section-padding projects-section">
+      <div class="container">
+        <div class="section-title text-center reveal">
+          <span>Projects</span>
+          <h2>Selected work and project ideas</h2>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="project-card">
+              <div class="project-image gradient-one">
+                <i class="fa-solid fa-wallet"></i>
+              </div>
+              <div class="project-body">
+                <h3>Fintech Wallet Dashboard</h3>
+                <p>
+                  A payment-ready wallet interface with balance tracking,
+                  transaction history, and Paystack integration concept.
+                </p>
+                <div class="project-tags">
+                  <span>Django</span>
+                  <span>Paystack</span>
+                  <span>Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal delay-1">
+            <div class="project-card">
+              <div class="project-image gradient-two">
+                <i class="fa-solid fa-store"></i>
+              </div>
+              <div class="project-body">
+                <h3>E-commerce Platform</h3>
+                <p>
+                  Online store system with product listing, cart flow,
+                  customer checkout, payment, and admin management.
+                </p>
+                <div class="project-tags">
+                  <span>Python</span>
+                  <span>Django</span>
+                  <span>APIs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 reveal delay-2">
+            <div class="project-card">
+              <div class="project-image gradient-three">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div class="project-body">
+                <h3>Business Admin System</h3>
+                <p>
+                  A dashboard for managing records, clients, analytics,
+                  reports, users, and business operations.
+                </p>
+                <div class="project-tags">
+                  <span>Backend</span>
+                  <span>Database</span>
+                  <span>Dashboard</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-note reveal delay-3">
+          <p>
+            More real project case studies can be added here with screenshots, live links,
+            GitHub repositories, and client results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding process-section">
+      <div class="container">
+        <div class="section-title text-center reveal">
+          <span>Workflow</span>
+          <h2>How I approach development</h2>
+        </div>
+
+        <div class="timeline mt-5">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>01. Understand the Problem</h3>
+              <p>I begin by understanding the business goal, users, required features, and technical expectations.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>02. Design the Structure</h3>
+              <p>I plan the frontend, backend, database, user flow, API connections, and deployment path.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-2">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>03. Build and Integrate</h3>
+              <p>I develop clean interfaces, backend logic, authentication, dashboards, payments, and integrations.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal delay-3">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>04. Test and Deploy</h3>
+              <p>I test responsiveness, fix bugs, optimize performance, and deploy the project for real users.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-padding contact-section">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-lg-5">
+            <div class="section-title reveal">
+              <span>Contact</span>
+              <h2>Let’s build something powerful together.</h2>
+            </div>
+
+            <p class="contact-text reveal delay-1">
+              Need a developer for a website, backend system, payment integration,
+              dashboard, or complete web application? Send me a message.
+            </p>
+
+            <div class="contact-info reveal delay-2">
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+                <span>ayoogayheart@gmail.com</span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>+233 59 230 4067</span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Accra, Ghana / Remote</span>
+              </div>
+            </div>
+
+            <div class="social-links reveal delay-3">
+              <a href="https://github.com/Gayheart2506" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/ayoo-gayheart/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://x.com/gayheart_ayoo?s=11" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form class="contact-form reveal delay-2" id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" class="form-control" placeholder="Project inquiry" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="message">Message</label>
+                  <textarea id="message" class="form-control" rows="6" placeholder="Tell me about your project..." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn primary-btn w-100">
+                    Send Message
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </div>
+
+                <div class="col-12">
+                  <p id="formStatus" class="form-status"></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- Bootstrap JS (optional, but fine to include) -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span id="year"></span> Gayheart Bapalesum Ayoo. All Rights Reserved.
+      </p>
+
+      <a href="#home" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    const btn = document.getElementById("loveBtn");
-    const msg = document.getElementById("msg");
-
-    function popHearts(count = 14) {
-      const rect = btn.getBoundingClientRect();
-      for (let i = 0; i < count; i++) {
-        const el = document.createElement("div");
-        el.className = "heart";
-        el.textContent = Math.random() > 0.25 ? "💖" : "✨";
-
-        // start near button center with small random offset
-        const x = rect.left + rect.width / 2 + (Math.random() - 0.5) * 90;
-        const y = rect.top + rect.height / 2 + (Math.random() - 0.5) * 40;
-
-        el.style.left = x + "px";
-        el.style.top = y + "px";
-        el.style.transform = `translateY(0) scale(${0.8 + Math.random() * 0.7})`;
-
-        document.body.appendChild(el);
-        setTimeout(() => el.remove(), 950);
-      }
-    }
-
-    btn.addEventListener("click", () => {
-      msg.classList.toggle("show");
-      popHearts();
-      btn.animate(
-        [{ transform: "scale(1)" }, { transform: "scale(1.08)" }, { transform: "scale(1)" }],
-        { duration: 220, easing: "ease-out" }
-      );
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
