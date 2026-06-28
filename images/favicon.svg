@@ -1,0 +1,63 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="70" y1="40" x2="450" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5EEAD4"/>
+      <stop offset="0.48" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <linearGradient id="textGradient" x1="130" y1="145" x2="385" y2="365" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E0F2FE"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="120" fill="#070B18"/>
+
+  <circle cx="256" cy="256" r="198" fill="url(#bgGradient)" filter="url(#shadow)"/>
+
+  <circle cx="256" cy="256" r="166" fill="#070B18" fill-opacity="0.94"/>
+
+  <path
+    d="M151 193L90 256L151 319"
+    stroke="#5EEAD4"
+    stroke-width="34"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M361 193L422 256L361 319"
+    stroke="#60A5FA"
+    stroke-width="34"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M292 143L220 369"
+    stroke="#F8FAFC"
+    stroke-width="30"
+    stroke-linecap="round"
+  />
+
+  <text
+    x="256"
+    y="292"
+    text-anchor="middle"
+    font-family="Inter, Arial, Helvetica, sans-serif"
+    font-size="86"
+    font-weight="900"
+    fill="url(#textGradient)"
+    letter-spacing="-6"
+  >
+    G
+  </text>
+
+  <circle cx="370" cy="138" r="18" fill="#F97316"/>
+  <circle cx="142" cy="374" r="13" fill="#5EEAD4"/>
+</svg>
